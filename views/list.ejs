@@ -1,15 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=>, initial-scale=1.0">
-    <title>To Do list</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
+<%- include("header") -%>
     <div class="box" id="heading">
-        <h1><%= DayOfWeek %> </h1>
+        <h1><%= Heading %> </h1>
     </div>
     <div class="box" >
         <% newListItems.forEach(function(val){ %>
@@ -20,12 +11,7 @@
         <% })%>
         <form action="/" method="post" class="item">
             <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
-            <button type="submit"> + </button>
+            <button type="submit" name="submit" value= <%=Heading %> > + </button>
         </form>
     </div>
-    
-
-  
-
-</body>
-</html>
+    <%- include("footer") -%>
